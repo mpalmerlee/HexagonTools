@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js/HexagonTools.js"></script>
+<script type="text/javascript" src="js/HexCalcs.js"></script>
+<script type="text/javascript">
+
+/*
+function findPerfectSquareHexWithIntegerSides()
+{
+	var status = "";
+
+	for(var z = 1.0; z <= 100.0; z++)
+	{
+		for(var y = 0.5; y < z; y+=0.5)
+		{
+			for(var x = 0.5; x < y; x+=0.5)
+			{
+				//pythagoras
+				if(Math.pow(x, 2) + Math.pow(y, 2) == Math.pow(z, 2))
+				{
+					//perfect square test:
+					if((2.0*y)-(2.0*x) == z)
+					{
+						status += "X: " + x + " Y: " + y + " Z: " + z + "<br />";
+					}
+				}
+			}
+		}
+	}
+	var contentDiv = document.getElementById("psXYZ");
+
+	contentDiv.innerHTML = "Perfect Square Hex With Integer Sides: <br />" + status;
+}
+*/
+
+</script>
+</head>
+<body>
+<!--
+<input type="button" onclick="findPerfectSquareHexWithIntegerSides()" value="find 1"/>
+<div id="psXYZ"></div>
+-->
+
+<h3>Hex Based on Side Length</h3>
+Side Length (z):<br />
+<input type="text" id="sideLength" value="50.0" /><br />
+Ratio of Width:Height (4:3, r = 1.333), (2/&radic;<span style="text-decoration:overline;">3</span>, r = 1.1547...)<br />
+<input type="text" id="whRatio" value="1.1547005383792515290182975610039" /><br />
+<input type="button" onclick="debugHexZR()" value="Find Hex With Side Length Z"/>
+
+<h3>Hex Based on Width and Height</h3>
+Width:<br />
+<input type="text" id="hexWidth" value="100.0" /><br />
+Height:<br />
+<input type="text" id="hexHeight" value="86.60254037844388" /><br />
+<input type="button" onclick="debugHexWH()" value="Find Hex With Width and Height"/>
+
+<div id="hexStatus"></div>
+
+<canvas id="hexCanvas" width="800" height="600" style="width:800px;height:600px" />
+</body>
+</html>
