@@ -203,6 +203,21 @@ HT.Hexagon.prototype.Contains = function(/*Point*/ p) {
 	return isIn;
 };
 
+/**
+ * Returns absolute distance in pixels from the mid point of this hex to the given point
+ * @this {HT.Hexagon}
+ * @param {HT.Point} p the test point
+ * @return {number} the distance in pixels
+ */
+HT.Hexagon.prototype.distanceFromMidPoint = function(/*Point*/ p) {
+  // Pythagoras' Theorem: Square of hypotenuse = sum of squares of other two sides
+  var deltaX = this.MidPoint.X - p.X;
+	var deltaY = this.MidPoint.Y - p.Y;
+  
+  // squaring so don't need to worry about rooting a negative number  
+  //return Math.sqrt( (deltaX * deltaX) + (deltaY * deltaY) );
+  return (deltaX * deltaX) + (deltaY * deltaY);
+};
 
 HT.Hexagon.Orientation = {
 	Normal: 0,
