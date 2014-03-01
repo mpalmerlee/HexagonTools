@@ -14,3 +14,8 @@ Code for drawing Hexagons and hex grids on an HTML5 canvas. Companion code to He
 License
 =======
 This HexagonTools code is released under the MIT License.
+
+Contributors
+============
+Matt Palmerlee, Mastered Software 
+Ian, (disqus user boingy)
