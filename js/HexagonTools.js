@@ -219,34 +219,6 @@ HT.Hexagon.prototype.distanceFromMidPoint = function(/*Point*/ p) {
 	return Math.sqrt( (deltaX * deltaX) + (deltaY * deltaY) );
 };
 
-/**
-* Returns the nearest hex to a given point
-* Provided by: Ian (Disqus user: boingy)
-* @this {HT.Grid}
-* @param {HT.Point} p the test point 
-* @return {HT.Hexagon}
-*/
-HT.Grid.prototype.GetNearestHex = function(/*Point*/ p) {
-
-	var distance;
-	var minDistance = Number.MAX_VALUE;
-	var hx = null;
-
-	// iterate through each hex in the grid
-	for (var h in this.Hexes) {
-		distance = this.Hexes[h].distanceFromMidPoint(p);
-
-		if (distance < minDistance) // if this is the nearest thus far
-		{
-			minDistance = distance;
-			hx = this.Hexes[h];
-		}
-	}
-
-	return hx;
-};
-
-
 HT.Hexagon.Orientation = {
 	Normal: 0,
 	Rotated: 1
